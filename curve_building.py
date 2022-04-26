@@ -25,4 +25,4 @@ if __name__ == "main":
     embeddings = txt2emb(text)
 
     with open(sys.argv[2],'w') as o:
-    o.write(str(embeddings))
+        o.write(str(embeddings))
