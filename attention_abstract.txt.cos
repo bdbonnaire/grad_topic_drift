@@ -1,1 +1,0 @@
-[tensor([[0.4403]], device='cuda:0'), tensor([[0.3542]], device='cuda:0'), tensor([[0.2153]], device='cuda:0'), tensor([[0.3299]], device='cuda:0'), tensor([[0.3316]], device='cuda:0'), tensor([[0.4918]], device='cuda:0')]

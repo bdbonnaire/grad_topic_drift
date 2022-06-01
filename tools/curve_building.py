@@ -58,14 +58,19 @@ if __name__ == "__main__":
 
     ## Plotting of 2d and 3d curves
     fig = plt.figure(figsize=plt.figaspect(.5))
+    if len(sys.argv) == 3:
+        fig.suptitle(sys.argv[2], fontsize=24)
+
     
     ax2d = fig.add_subplot(1,2, 1)
     ax3d = fig.add_subplot(1,2, 2, projection='3d')
     ax2d.plot(proj2d[:,0], proj2d[:,1])
-    ax2d.plot(proj2d[0,0], proj2d[0,1], 'bx')
-    ax2d.plot(proj2d[-1,0], proj2d[-1,1], 'bo')
+    beg_curve, = ax2d.plot(proj2d[0,0], proj2d[0,1], 'bx')
+    end_curve, = ax2d.plot(proj2d[-1,0], proj2d[-1,1], 'bo')
 
     ax3d.plot(proj3d[:,0], proj3d[:,1], proj3d[:,2])
     ax3d.plot(proj3d[0,0], proj3d[0,1], proj3d[0,2], 'bx')
     ax3d.plot(proj3d[-1,0], proj3d[-1,1], proj3d[-1,2], 'bo')
+
+    fig.legend([beg_curve, end_curve], ['Beginning', 'End'])
     plt.show()
