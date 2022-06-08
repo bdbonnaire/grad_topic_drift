@@ -1,3 +1,4 @@
+clf_12e_5w.pkl filter=lfs diff=lfs merge=lfs -text
 *.un~ filter=lfs diff=lfs merge=lfs -text
 *.pkl filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
