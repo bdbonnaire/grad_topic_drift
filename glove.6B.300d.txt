@@ -1,0 +1,1 @@
+/home/basiled/Downloads/glove.6B/glove.6B.300d.txt

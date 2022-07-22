@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1dcfc8bd02892d5c514902f2195acbd3574e571f7db32968e457c52454655716
-size 457
+topWords = ["the", "be", "of", "and", "a", "in", "to", "have", "it", "for", "that", "on", "with", "do", "at", "by", "not", "this", "but", "from", "that", "or", "which", "as", "we", "an", "will"]
+
+with open("attention_intro.txt", "r") as f:
+    text = f.read().split()
+
+cleantxt = []
+for words in text:
+    if words not in topWords:
+        cleantxt.append(words)
+
+txt = " ".join(cleantxt)
+with open("attention_intro.clean.txt", "w") as f:
+
+   f.write(txt) 
